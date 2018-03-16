@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700|Droid+Serif:400,400italic);
+body {
+  background-color: #ecf0e7;
+  font-family: "Droid Serif", serif;
+  font-size: 14px;
+  color: #8ea7c2;
+}
+
+.container {
+  position: relative;
+  background-color: #e1e1e6;
+  width: 700px;
+  padding: 0px;
+  margin-top: 10px;
+  .jumbotron {
+    background-color: #5c5457;
+    color: #e1e1e6;
+    height: 40px;
+    margin-bottom: 0px;
+    h1 {
+      font-family: "Oswald", sans-serif;
+      font-weight: bold;
+      font-size: 3em;
+      margin: -20px 0px 0px -10px;
+    }
+  }
+}
+
+#body {
+  color: #e1e1e6;
+  .row {
+    margin: 1px auto auto auto;
+    background-color: #5c5457;
+    width: 700px;
+    padding: 5px;
+    #logo {
+      max-width: 50px;
+      max-height: 50px;
+      border-radius: 50%;
+      border: 3px solid #e1e1e6;
+      margin: auto;
+    }
+    #gameDes {
+      font-style: italic;
+    }
+    #name, #gameDes {
+      line-height: 25px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+  }
+  .offline {
+    background-color: #4a5e82;
+    a, a:focus, a:hover, a:visited {
+      color: #b8cca6;
+    }
+  }
+  .online {
+    background-color: #b8cca6;
+    color: #5c5457;
+    a,
+    a:focus,
+    a:hover,
+    a:visited {
+      color: #4a5e82;
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  right: 0px;
+  top: 10px; //align to top and not bottom because removing rows will cause the position of the bottom to change, i.e. the position of .menu also changes because it is relative to bottom
+  color: #5c5457;
+  font-family: "Oswald", sans-serif; //note that if you place menu inside jumbotron for html the font settings for jumbotron css bootstrap will override these. bootstrap can be overriden using ID selectors, google it
+  font-size: 0.8em;
+  font-weight: bold;
+  .active, .rectangle:hover {
+    width: 65px !important;
+    transition: width 0.4s linear;
+    cursor: pointer;
+  }
+  #online {
+    .circle {
+      background-color: #b8cca6;
+    }
+  }
+  #offline {
+    .circle {
+      background-color: #8ea7c2;
+    }
+  }
+  .rectangle {
+    height: 20px;
+    background-color: #e1e1e6;
+    width: 20px;
+    padding: 0px 5px;
+    margin: 2px 0px;
+    float: right;
+    clear: right;
+    overflow: hidden;
+    transition: width 0.4s linear;
+    p {
+      float: right;
+      margin: 2px;
+    }
+    .circle {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      border: 1px solid #5c5457;
+      float: left;
+      margin: 5px 5px 5px 0px;
+      background-color: #5c5457;
+    }
+    #online {
+      .circle {
+        background-color: #b8cca6;
+      }
+    }
+    #offline {
+      .circle {
+        background-color: #8ea7c2;
+      }
+    }
+  }
+}
+
+#footer{
+  position: relative;
+  background-color: #5c5457;
+  color: #e1e1e6;
+  padding: 5px 65px 5px 15px;
+  margin: 1px auto auto auto;
+}
+
+footer{
+  text-align: center;
+  margin-top: 10px;
+}
